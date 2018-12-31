@@ -16,9 +16,12 @@ class CountDownTest < Minitest::Test
 
   def test_it_can_return_a_number
     count = CountDown.new
+    dummy_date = Date.parse('30-12-2018')
+    expected = 17
+    result = count.days_until_goal(dummy_date)
 
     assert_instance_of Integer, count.days_until_goal
-
+    assert_equal expected, result
   end
 
 end
