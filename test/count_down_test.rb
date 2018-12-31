@@ -14,4 +14,11 @@ class CountDownTest < Minitest::Test
     assert_equal count.end_date, goal_date
   end
 
+  def test_it_can_return_a_number
+    count = CountDown.new
+
+    assert_instance_of Integer, count.days_until_goal
+
+  end
+
 end
